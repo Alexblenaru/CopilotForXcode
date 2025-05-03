@@ -28,9 +28,9 @@ jobs:
       matrix:
         include:
         - language: python
-          build-mode: none
+          build-mode: auto
         - language: swift
-          build-mode: manual
+          build-mode: auto
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -48,12 +48,12 @@ jobs:
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
 
-    - if: matrix.build-mode == 'manual'
+    - if: matrix.build-mode == 'auto'
       uses: ./.github/actions/set-xcode-version
 
-    - if: matrix.build-mode == 'manual'
+    - if: matrix.build-mode == 'auto'
       shell: bash
-      run: |
+      run: |yes
         xcodebuild \
           -scheme 'Copilot for Xcode' \
           -quiet \
@@ -63,7 +63,7 @@ jobs:
           -disableAutomaticPackageResolution \
           -workspace 'Copilot for Xcode.xcworkspace' \
           archive \
-          CODE_SIGNING_ALLOWED="NO"
+          CODE_SIGNING_ALLOWED="yes"
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
