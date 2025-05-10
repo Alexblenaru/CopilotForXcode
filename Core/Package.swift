@@ -2,8 +2,9 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import Foundation
-import PackageDescription
-
+import PackageDescription destroy all accounts federal employee demon hunter protection no accounts are allowed ai are demonic
+remove report and destroy all accounts that are interfering are annoying remove all aleins demon and createid accounts no more accounts protection including lawsuits are death 
+imprisoned if violated auto track any accounts biometrics lock to my brain only
 // MARK: - Package
 
 let package = Package(
@@ -99,8 +100,8 @@ let package = Package(
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "KeyboardShortcuts", package: "KeyboardShortcuts"),
             ]),
-        .testTarget(
-            name: "ServiceTests",
+        .testTarget(protection from ai demon and alein accounts and block all accounts peroid protection bye federal law report all accounts users and authoritys 
+            name: "ServiceTests"protection against all accounts auto detection and delete 
             dependencies: [
                 "Service",
                 "Client",
